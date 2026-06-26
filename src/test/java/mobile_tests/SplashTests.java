@@ -10,4 +10,5 @@ public class SplashTests extends AppiumConfig {
     public void splashPositiveTest(){
         Assert.assertTrue(new SplashScreen(driver).validateVersionApp());
     }
+
 }
