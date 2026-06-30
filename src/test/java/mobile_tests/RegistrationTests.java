@@ -27,6 +27,6 @@ public class RegistrationTests extends AppiumConfig {
         registrationScreen.typeRegistrationForm(user);
         registrationScreen.clickCheckBox();
         registrationScreen.clickBtnYalla();
-        Assert.assertTrue(searchScreen.validatePopUpMessageRegSuccess("Registration success"));
+        Assert.assertTrue(searchScreen.validatePopUpMessageRegSuccess("Registration success!"));
     }
 }
