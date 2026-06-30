@@ -10,9 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
-
-    implementation 'org.testng:testng:7.10.2'
+    implementation 'org.testng:testng:7.11.0'
 
     compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
@@ -24,6 +22,7 @@ dependencies {
     implementation 'io.rest-assured:rest-assured:4.5.1'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 
+    implementation 'org.seleniumhq.selenium:selenium-java:4.23.1'
     implementation 'io.appium:java-client:9.3.0'
 }
 
