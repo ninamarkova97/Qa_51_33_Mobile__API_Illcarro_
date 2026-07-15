@@ -1,0 +1,41 @@
+package utils;
+
+import dto.Car;
+import net.datafaker.Faker;
+
+import java.time.LocalDate;
+
+public class CarFactory {
+    static  Faker faker = new Faker();
+
+    public static Car positiveCar() {
+        Car car = Car.builder()
+                .serialNumber(faker.vehicle().licensePlate())
+                .manufacture(faker.vehicle().manufacturer())
+                .model(faker.vehicle().model())
+                .year(Integer.toString(faker.number().numberBetween(0, LocalDate.now().getYear())))
+                .fuel("Gas")
+                .seats(faker.number().numberBetween(2, 20))
+                .carClass(faker.vehicle().carType())
+                .pricePerDay(faker.number().randomDouble(2, 0, 1000))
+                .city("Haifa")
+                .about(faker.text().text(0, 500))
+                .build();
+        return car;
+    }
+    public static Car emptySerialNumberCar() {
+        Car car = Car.builder()
+                .serialNumber("")
+                .manufacture(faker.vehicle().manufacturer())
+                .model(faker.vehicle().model())
+                .year(Integer.toString(faker.number().numberBetween(0, LocalDate.now().getYear())))
+                .fuel("Gas")
+                .seats(faker.number().numberBetween(2, 20))
+                .carClass(faker.vehicle().carType())
+                .pricePerDay(faker.number().randomDouble(2, 0, 1000))
+                .city("Haifa")
+                .about(faker.text().text(0, 500))
+                .build();
+        return car;
+    }
+}

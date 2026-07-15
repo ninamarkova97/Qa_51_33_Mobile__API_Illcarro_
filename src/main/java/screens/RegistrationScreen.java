@@ -5,7 +5,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 
-public class RegistrationScreen extends  BaseScreen{
+
+public class RegistrationScreen extends BaseScreen {
     public RegistrationScreen(AppiumDriver driver) {
         super(driver);
     }
@@ -23,16 +24,18 @@ public class RegistrationScreen extends  BaseScreen{
     @AndroidFindBy(id = "com.telran.ilcarro:id/regBtn")
     WebElement btnYalla;
 
-public void typeRegistrationForm(User user){
-    inputName.sendKeys(user.getFirstName());
-    inputLastName.sendKeys(user.getLastName());
-    inputEmail.sendKeys(user.getUsername());
-    inputPassword.sendKeys(user.getPassword());
-}
-public void clickCheckBox(){
-    checkBoxIAgree.click();
-}
-public  void clickBtnYalla(){
-    btnYalla.click();
-}
+    public void typeRegistrationForm(User user) {
+        inputName.sendKeys(user.getFirstName());
+        inputLastName.sendKeys(user.getLastName());
+        inputEmail.sendKeys(user.getUsername());
+        inputPassword.sendKeys(user.getPassword());
+    }
+
+    public void clickCheckBox(){
+        checkBoxIAgree.click();
+    }
+
+    public void clickBtnYalla(){
+        btnYalla.click();
+    }
 }
